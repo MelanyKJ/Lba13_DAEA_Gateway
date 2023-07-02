@@ -1,28 +1,28 @@
 {
     "Routes": [
-        {
-            "DownstreamPathTemplate": "/api/Student",
-            "DownstreamScheme": "https",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 7222
-                }
-            ],
-            "UpstreamPathTemplate": "/gateway/Student",
-            "UpstreamHttpMethod": [ "Get" ]
-        },
-        {
-            "DownstreamPathTemplate": "/api/Products",
-            "DownstreamScheme": "https",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "localhost",
-                    "Port": 7102
-                }
-            ],
-            "UpstreamPathTemplate": "/gateway/Products",
-            "UpstreamHttpMethod": [ "Get" ]
-        }
+      {
+        "DownstreamPathTemplate": "/WebB/api/Students",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 80
+          }
+        ],
+        "UpstreamPathTemplate": "/gateway/Students",
+        "UpstreamHttpMethod": [ "Get" ]
+      },
+      {
+        "DownstreamPathTemplate": "/WebA/api/Products",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 80
+          }
+        ],
+        "UpstreamPathTemplate": "/gateway/Products",
+        "UpstreamHttpMethod": [ "Get" ]
+      }
     ]
 }
